@@ -1,3 +1,6 @@
+@import url(../board/board.scss);
+@import url(../square/square.scss);
+
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
@@ -19,8 +22,7 @@ body {
   
   .square {
     background: #fff;
-    border: 1px solid #999;
-    float: left;
+    border: 1px solid #999; 
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
