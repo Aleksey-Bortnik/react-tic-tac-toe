@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Board from './board/board.jsx';
 import './index.scss';
-import Board from '../board/board.js';
 
 class Game extends React.Component { 
     render() {
