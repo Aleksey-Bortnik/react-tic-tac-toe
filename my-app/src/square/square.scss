@@ -1,0 +1,21 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.square {
+    background: $color-background;
+    border: 1px solid $border-color-square;
+    margin: -1px -1px 0 0;
+    padding: 0;
+    text-align: center;
+    min-width: $size-square;
+    min-height: $size-square;
+    @include text-decorator-square();
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: $color-background;
+}
