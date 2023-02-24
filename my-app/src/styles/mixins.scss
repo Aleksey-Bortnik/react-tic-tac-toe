@@ -1,0 +1,7 @@
+/** @format */
+
+@mixin text-decorator-square() {
+  font-size: $font-square;
+  font-weight: bold;
+  line-height: $size-square;
+}

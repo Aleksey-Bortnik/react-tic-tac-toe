@@ -1,16 +1,15 @@
-@import "../variables.scss";
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 .square {
-    background: $background;
-    border: 1px solid $border;
-    font-size: $square-font;
-    font-weight: bold;
-    line-height: $square-size;
+    background: $color-background;
+    border: 1px solid $border-color-square;
+    @include text-decorator-square();
     margin: -1px -1px 0 0;
     padding: 0;
     text-align: center;
-    min-width: $square-size;
-    min-height: $square-size;
+    min-width: $size-square;
+    min-height: $size-square;
 }
 
 .square:focus {
@@ -18,5 +17,5 @@
 }
 
 .kbd-navigation .square:focus {
-    background: $background;
+    background: $color-background;
 }

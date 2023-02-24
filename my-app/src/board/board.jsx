@@ -1,13 +1,14 @@
 import React from 'react';
 import Square from '../square/square.jsx';
-import { calculateWinner } from '../index.js';
+import { calculateWinner } from '../utils/utils.jsx';
+import './board.scss'
 
 class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             squares: Array(9).fill(null),
-            xIsNext: true,
+            isXNext: true,
         };
     }
 
@@ -16,10 +17,10 @@ class Board extends React.Component {
         if (calculateWinner(squares) || squares[i]) {
             return;
         }
-        squares[i] = this.state.xIsNext ? 'X' : 'O';
+        squares[i] = this.state.isXNext ? 'X' : 'O';
         this.setState({
             squares: squares,
-            xIsNext: !this.state.xIsNext,
+            isXNext: !this.state.isXNext,
         })
     }
 
@@ -37,7 +38,7 @@ class Board extends React.Component {
         if (winner)
             status = 'The winner is: ' + winner;
         else {
-            status = 'Next is:' + (this.state.xIsNext ? 'X' : 'O');
+            status = 'Next is:' + (this.state.isXNext ? 'X' : 'O');
         }
         return (
             <div>
