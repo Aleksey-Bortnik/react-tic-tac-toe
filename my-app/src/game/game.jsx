@@ -24,11 +24,13 @@ class Game extends React.Component {
         }
         squares[i] = this.state.isXNext ? 'X' : 'O';
         this.setState({
-            history: history.concat([{
-                squares: squares,
-            }]),
+            history: history.concat([
+                {
+                    squares: squares,
+                }
+            ]),
             stepNumber: history.length,
-            isXNext: !this.state.isXNext,
+            isXNext: !this.state.isXNext
         });
     }
 
