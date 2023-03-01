@@ -30,14 +30,14 @@ class Game extends React.Component {
                 }
             ]),
             stepNumber: history.length,
-            isXNext: !this.state.isXNext
+            isXNext: !this.state.isXNext,
         });
-    }
+    };
 
     jumpTo(step) {
         this.setState({
             stepNumber: step,
-            xIsNext: (step % 2) === 0,
+            IsXNext: (step % 2) === 0,
         });
     }
 
@@ -45,7 +45,6 @@ class Game extends React.Component {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
         const winner = calculateWinner(current.squares);
-
         const moves = history.map((step, move) => {
             const desc = move ? 'To the step #:' + move : 'To Start';
             return (
