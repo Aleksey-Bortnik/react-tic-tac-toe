@@ -32,12 +32,12 @@ class Game extends React.Component {
             stepNumber: history.length,
             isXNext: !this.state.isXNext,
         });
-    };
+    }
 
     jumpTo(step) {
         this.setState({
             stepNumber: step,
-            IsXNext: (step % 2) === 0,
+            isXNext: (step % 2) === 0,
         });
     }
 
