@@ -4,7 +4,8 @@
 .square {
     background: $color-background;
     border: 1px solid $border-color-square;
-    margin: -1px -1px 0 0;
+    float: left;
+    margin: -1px -1px -3px -1px;
     padding: 0;
     text-align: center;
     min-width: $size-square;
